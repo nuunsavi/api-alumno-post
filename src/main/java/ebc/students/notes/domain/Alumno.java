@@ -22,12 +22,16 @@ public class Alumno {
     @Column(name = "nota")
     private List<Integer> notas;
 
+    @Column(name = "promedio", nullable = false)
+    private Double promedio;
+
     public Alumno() {}
 
-    public Alumno(String dni, String nombres, List<Integer> notas) {
+    public Alumno(String dni, String nombres, List<Integer> notas, Double promedio) {
       this.dni = dni;
       this.nombres = nombres;
       this.notas = notas;
+      this.promedio = promedio;
     }
 
 }
