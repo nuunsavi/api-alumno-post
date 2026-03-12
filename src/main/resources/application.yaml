@@ -8,7 +8,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+logging:
+    level:
+        org:
+            hibernate:
+                orm:
+                    connections:
+                        pooling: ERROR
