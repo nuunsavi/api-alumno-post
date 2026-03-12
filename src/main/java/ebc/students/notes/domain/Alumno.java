@@ -1,10 +1,13 @@
 package ebc.students.notes.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import java.util.List;
 
 @Entity
 @Table(name = "alumnos")
+@Getter @Setter
 public class Alumno {
 
     @Id
