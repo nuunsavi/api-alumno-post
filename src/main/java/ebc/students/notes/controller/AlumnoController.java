@@ -26,7 +26,7 @@ public class AlumnoController {
         return ResponseEntity.status(201).body("Alumno registrado exitosamente");
       }else{
         log.info("No se puede guardar alumno con DNI duplicado");
-        return ResponseEntity.status(201).body("El alumno con DNI ${alumno.dni()} ya ha sido registrado anteriormente");
+        return ResponseEntity.status(201).body("El alumno con DNI %s ya ha sido registrado anteriormente".formatted(alumno.dni()));
       }
     } catch (Exception e) {
       log.error("Hubo un error al guardar el alumno", e);
