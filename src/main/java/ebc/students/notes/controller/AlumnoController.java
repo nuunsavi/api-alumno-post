@@ -9,14 +9,14 @@ import lombok.extern.slf4j.Slf4j;
 import ebc.students.notes.domain.Alumno;
 
 @RestController
-@RequestMapping("/api/v1/alumnos")
+@RequestMapping("/alumnos")
 @Slf4j
 public class AlumnoController {
 
   @Autowired
   AlumnoService service;
 
-  @PostMapping("/")
+  @PostMapping("")
   public ResponseEntity<String> crearAlumno(@RequestBody AlumnoRequestDTO alumno) {
     log.info("Recibiendo petición para crear al alumno: {}", alumno.nombres());
     try {
